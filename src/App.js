@@ -3,8 +3,10 @@ import React from 'react'
 import './App.css'
 
 import { BooksList } from './BookData'
-
 import Book from './components/book'
+import Shelf from './components/shelf'
+
+
 
 const BookList = {
   bookshelf: {
@@ -151,6 +153,7 @@ class BooksApp extends React.Component {
               <div>
 
               { /* START SINGLE SHELF CURRENTLY READING */ }
+              <Shelf shelf={BookList.bookshelf.shelves[0]}/>
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
                   <div className="bookshelf-books">
@@ -171,8 +174,7 @@ class BooksApp extends React.Component {
                     <ol className="books-grid">
                     { /* START BOOK */ }
                     {BookList.bookshelf.shelves[1].books.map(book=> <Book book={book}/>)}
-
-                      { /* END BOOK */ }
+                    { /* END BOOK */ }
                     </ol>
                   </div>
                 </div>
@@ -184,9 +186,7 @@ class BooksApp extends React.Component {
                     <ol className="books-grid">
                     { /* START BOOKS */ }
                     {BookList.bookshelf.shelves[2].books.map(book=> <Book book={book}/>)}
-
                     { /* END BOOKS */ }
-
                     </ol>
                   </div>
                 </div>
