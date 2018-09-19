@@ -3,13 +3,13 @@ import React from 'react'
 import Book from './book'
 
 const Shelf = (props) => {
-  const { shelf } = props;
+  const { type, books } = props.shelf;
   return (
     <div className="bookshelf">
-      <h2 className="bookshelf-title">Currently Reading</h2>
+      <h2 className="bookshelf-title">{type}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          {shelf.books.map(book=> <Book book={book}/>)}
+          {books.map(book=> <Book book={book}/>)}
         </ol>
       </div>
     </div>

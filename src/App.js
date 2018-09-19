@@ -153,32 +153,13 @@ class BooksApp extends React.Component {
               <div>
 
               { /* START SINGLE SHELF CURRENTLY READING */ }
-              <Shelf shelf={BookList.bookshelf.shelves[0]}/>
-              
+
+              {BookList.bookshelf.shelves.map(shelf => <Shelf shelf={shelf} />)}
+
                 { /* END OF SINGLE SHELF CURRENTLY READING */ }
                 { /* START SINGLE SHELF WANT TO READ */ }
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Want to Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                    { /* START BOOK */ }
-                    {BookList.bookshelf.shelves[1].books.map(book=> <Book book={book}/>)}
-                    { /* END BOOK */ }
-                    </ol>
-                  </div>
-                </div>
                 { /* END SINGLE SHELF WANT TO READ */ }
                 { /* START OF SINGLE SHELF READ */ }
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                    { /* START BOOKS */ }
-                    {BookList.bookshelf.shelves[2].books.map(book=> <Book book={book}/>)}
-                    { /* END BOOKS */ }
-                    </ol>
-                  </div>
-                </div>
                 { /* END OF SINGLE SHELF READ */ }
               </div>
             </div>
