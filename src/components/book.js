@@ -4,6 +4,7 @@ export default class Book extends Component {
   render() {
     const { title, author, bookCover } = this.props.book;
     const { width, height, image } = bookCover;
+    
     return (
       <div>
       <li>

@@ -2,9 +2,6 @@
 import React from 'react'
 import Book from './book'
 
-
-
-
 const Shelf = (props) => {
   const { shelf } = props;
   return (
