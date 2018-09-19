@@ -157,8 +157,7 @@ class BooksApp extends React.Component {
                     <ol className="books-grid">
 
                     {/* START BOOK */}
-                <Book book={BookList.bookshelf.shelves[0].books[0]}/>
-                <Book book={BookList.bookshelf.shelves[0].books[1]}/>
+                {BookList.bookshelf.shelves[0].books.map(book=> <Book book={book}/>)}
                       { /* END BOOK */ }
 
                     </ol>
@@ -171,8 +170,8 @@ class BooksApp extends React.Component {
                   <div className="bookshelf-books">
                     <ol className="books-grid">
                     { /* START BOOK */ }
-                    <Book book={BookList.bookshelf.shelves[1].books[0]}/>
-                    <Book book={BookList.bookshelf.shelves[1].books[1]}/>
+                    {BookList.bookshelf.shelves[1].books.map(book=> <Book book={book}/>)}
+
                       { /* END BOOK */ }
                     </ol>
                   </div>
@@ -184,11 +183,10 @@ class BooksApp extends React.Component {
                   <div className="bookshelf-books">
                     <ol className="books-grid">
                     { /* START BOOKS */ }
-                    <Book book={BookList.bookshelf.shelves[2].books[0]}/>
-                    <Book book={BookList.bookshelf.shelves[2].books[1]}/>
-                    <Book book={BookList.bookshelf.shelves[2].books[2]}/>
+                    {BookList.bookshelf.shelves[2].books.map(book=> <Book book={book}/>)}
+
                     { /* END BOOKS */ }
-                    
+
                     </ol>
                   </div>
                 </div>
