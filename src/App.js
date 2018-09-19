@@ -5,7 +5,7 @@ import './App.css'
 import { BooksList } from './BookData'
 import Book from './components/book'
 import Shelf from './components/shelf'
-
+import Page from './components/page'
 
 
 const BookList = {
@@ -141,37 +141,7 @@ class BooksApp extends React.Component {
             </div>
           </div>
         ) : (
-
-          // START BOOK PAGE
-          <div className="list-books">
-            <div className="list-books-title">
-              <h1>MyReads</h1>
-            </div>
-
-            { /* START OF BOOKCASE */ }
-            <div className="list-books-content">
-              <div>
-
-              { /* START SINGLE SHELF CURRENTLY READING */ }
-
-              {BookList.bookshelf.shelves.map(shelf => <Shelf shelf={shelf} />)}
-
-                { /* END OF SINGLE SHELF CURRENTLY READING */ }
-                { /* START SINGLE SHELF WANT TO READ */ }
-                { /* END SINGLE SHELF WANT TO READ */ }
-                { /* START OF SINGLE SHELF READ */ }
-                { /* END OF SINGLE SHELF READ */ }
-              </div>
-            </div>
-            { /* END OF BOOKCASE */ }
-
-            { /* START SEARCH */ }
-            <div className="open-search">
-              <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
-            </div>
-            { /* END SEARCH */ }
-
-          </div>
+          <Page bookshelf={BookList.bookshelf}/>
         )}
       </div>
     )
