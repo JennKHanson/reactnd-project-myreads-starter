@@ -1,8 +1,9 @@
 import React from 'react';
 import Shelf from './shelf'
 
+
 const Page = (props) => {
-  const { bookshelf } = props;
+  const { bookshelf, searchButton } = props;
   return (
 
               // START BOOK PAGE
@@ -14,14 +15,14 @@ const Page = (props) => {
                 { /* START OF BOOKCASE */ }
                 <div className="list-books-content">
                   <div>
-                  {bookshelf.shelves.map(shelf => <Shelf shelf={ shelf } />)}
+                  {bookshelf.shelves.map(shelf => <Shelf shelf={ shelf } key={shelf.bookshelf}/>)}
                   </div>
                 </div>
                 { /* END OF BOOKCASE */ }
 
                 { /* START SEARCH */ }
                 <div className="open-search">
-                  <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+                  <a onClick={searchButton}>Add a book</a>
                 </div>
                 { /* END SEARCH */ }
 

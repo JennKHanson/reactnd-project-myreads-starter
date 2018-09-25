@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Book extends Component {
   render() {
-    const { title, author, bookCover } = this.props.book;
+    const { title, author, shelf, bookCover } = this.props.book;
     const { width, height, image } = bookCover;
 
 
@@ -13,7 +13,7 @@ export default class Book extends Component {
           <div className="book-top">
             <div className="book-cover" style={{ width: width, height: height, backgroundImage: image }}></div>
             <div className="book-shelf-changer">
-              <select>
+              <select value={shelf}>
                 <option value="move" disabled>Move to...</option>
                 <option value="currentlyReading">Currently Reading</option>
                 <option value="wantToRead">Want to Read</option>

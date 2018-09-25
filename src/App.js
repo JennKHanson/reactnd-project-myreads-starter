@@ -21,6 +21,10 @@ class BooksApp extends React.Component {
     showSearchPage: false
   }
 
+searchButton = () => {
+  this.setState({ showSearchPage: true })
+}
+
   render() {
     return (
       <div className="app">
@@ -45,7 +49,7 @@ class BooksApp extends React.Component {
             </div>
           </div>
         ) : (
-          <Page bookshelf={BookList.bookshelf}/>
+          <Page bookshelf={BookList.bookshelf} searchButton={this.searchButton}/>
         )}
       </div>
     )
