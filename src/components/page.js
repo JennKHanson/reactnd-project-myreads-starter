@@ -14,7 +14,7 @@ const Page = (props) => {
                 { /* START OF BOOKCASE */ }
                 <div className="list-books-content">
                   <div>
-                  {bookshelf.shelves.map(shelf => <Shelf shelf={shelf} />)}
+                  {bookshelf.shelves.map(shelf => <Shelf shelf={ shelf } />)}
                   </div>
                 </div>
                 { /* END OF BOOKCASE */ }

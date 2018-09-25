@@ -2,9 +2,9 @@ import React from 'react'
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
 
-import { BooksList } from './BookData'
-import Book from './components/book'
-import Shelf from './components/shelf'
+//import { BooksList } from './BookData'
+//import Book from './components/book'
+//import Shelf from './components/shelf'
 import Page from './components/page'
 
 
