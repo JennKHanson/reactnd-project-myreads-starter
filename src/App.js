@@ -5,7 +5,7 @@ import './App.css'
 import { BookList } from './BookData'
 import Book from './components/book'
 import Shelf from './components/shelf'
-import Page from './components/page'
+import Page from './components/mainpage'
 
 
 
