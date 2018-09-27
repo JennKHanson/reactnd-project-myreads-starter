@@ -9,7 +9,6 @@ import Shelf from './components/shelf'
 import Page from './components/mainpage'
 
 
-
 class BooksApp extends React.Component {
   state = {
     /**
